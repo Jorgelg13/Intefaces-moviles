@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Interfaces Graficas',
-      initialRoute: 'home',
+      initialRoute: 'basico',
       routes: {
         'basico': (BuildContext context) => BasicoPage(),
         'scroll': (BuildContext context) => ScrollPage(),

@@ -33,8 +33,8 @@ class DemoPage extends StatelessWidget {
               begin: FractionalOffset(0.0, 0.5),
               end: FractionalOffset(0.0, 1.0),
               colors: [
-            Color.fromRGBO(52, 54, 101, 1.0),
-            Color.fromRGBO(35, 37, 57, 1.0),
+            Color.fromRGBO(46,125,225,1.0),
+            Color.fromRGBO(46,125,225, 1.0),
           ])),
     );
 
@@ -46,8 +46,8 @@ class DemoPage extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(80.0),
             gradient: LinearGradient(colors: [
-              Color.fromRGBO(236, 98, 188, 1.0),
-              Color.fromRGBO(241, 142, 172, 1.0)
+              Color.fromRGBO(19,27,77, 1.0),
+              Color.fromRGBO(19,27,77, 1.0)
             ]),
             color: Colors.pink),
       ),
@@ -72,7 +72,7 @@ class DemoPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              'Classify transacction',
+              'Unity Promotores Corredos de seguros',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 30.0,
@@ -81,7 +81,7 @@ class DemoPage extends StatelessWidget {
             SizedBox(
               height: 10.0,
             ),
-            Text('Classify this transaction into a particular category',
+            Text('Broker en todo Centro America',
                 style: TextStyle(color: Colors.white, fontSize: 18.0)),
           ],
         ),
@@ -93,9 +93,9 @@ class DemoPage extends StatelessWidget {
     return new Theme(
       data: Theme.of(context).copyWith(
           canvasColor: Color.fromRGBO(55, 57, 84, 1.0),
-          primaryColor: Colors.pinkAccent,
+          primaryColor: Colors.white,
           textTheme: Theme.of(context).textTheme.copyWith(
-              caption: TextStyle(color: Color.fromRGBO(116, 117, 152, 1.0)))),
+          caption: TextStyle(color: Color.fromRGBO(116, 117, 152, 1.0)))),
       child: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -115,7 +115,8 @@ class DemoPage extends StatelessWidget {
                 Icons.supervised_user_circle,
                 size: 30.0,
               ),
-              title: Container())
+              title: Container()),
+              
         ],
       ),
     );
@@ -135,6 +136,10 @@ class DemoPage extends StatelessWidget {
         TableRow(children: [
           _boton(Colors.yellow, Icons.lock, 'Bloquear'),
           _boton(Colors.red, Icons.error, 'Errores'),
+        ]),
+        TableRow(children: [
+          _boton(Colors.lime, Icons.lock, 'Bloquear'),
+          _boton(Colors.cyan, Icons.error, 'Errores'),
         ])
       ],
     );
@@ -166,7 +171,7 @@ class DemoPage extends StatelessWidget {
                   size: 30.0,
                 ),
               ),
-              Text(texto, style: TextStyle(color: Colors.pinkAccent)),
+              Text(texto, style: TextStyle(color: Colors.white)),
               SizedBox(
                 height: 5.0,
               )
