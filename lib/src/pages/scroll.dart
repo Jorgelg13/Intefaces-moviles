@@ -8,7 +8,7 @@ class ScrollPage extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: <Widget>[
           _pagina1(),
-          _pagina2(),
+          _pagina2(context),
         ],
       )
     );
@@ -65,16 +65,16 @@ Widget _textos(){
 }
 
 
- Widget _pagina2() {
+ Widget _pagina2(BuildContext context) {
    return Stack(
      children: <Widget>[
        _colorFondo(),
-      _botonCentral()
+      _botonCentral(context)
      ],
    );
  }
 
- Widget _botonCentral(){
+ Widget _botonCentral(BuildContext context){
    return Center(
      child: RaisedButton(
        shape: StadiumBorder(),
@@ -85,7 +85,7 @@ Widget _textos(){
          child: Text('Bienvenidos', style: TextStyle(fontSize: 20.0),),
        ),
        onPressed: (){
-
+         Navigator.pushNamed(context, 'home');
        },
      ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
 import 'package:interfaces/src/pages/basico.dart';
+import 'package:interfaces/src/pages/demoCurso.dart';
 import 'package:interfaces/src/pages/demoPage.dart';
 import 'package:interfaces/src/pages/scroll.dart';
  
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         'basico': (BuildContext context) => BasicoPage(),
         'scroll': (BuildContext context) => ScrollPage(),
         'home': (BuildContext context) => DemoPage(),
+        'curso': (BuildContext context) => DemoCurso(),
       },
     );
   }
