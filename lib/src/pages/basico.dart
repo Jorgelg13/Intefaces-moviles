@@ -16,10 +16,10 @@ class BasicoPage extends StatelessWidget {
             _crearTitulo(),
             _acciones(context),
             _crearTexto(),
-             _crearTexto(),
-              _crearTexto(),
-               _crearTexto(),
-                _crearTexto(),
+            _crearTexto(),
+            _crearTexto(),
+            _crearTexto(),
+            _crearTexto(),
           ]
           ),
         ),
@@ -77,9 +77,24 @@ class BasicoPage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          _accion(context, Icons.call, 'CALL'),
-          _accion(context,Icons.near_me, 'ROUTE'),
-          _accion(context,Icons.share, 'SHARE'),
+          GestureDetector(
+            child: _accion(context, Icons.call, 'Scroll'),
+              onTap: (){
+                 Navigator.pushNamed(context, 'scroll');
+            },
+            ),
+          GestureDetector(
+            child: _accion(context,Icons.near_me, 'Planetas'),
+            onTap: (){
+                 Navigator.pushNamed(context, 'planetas');
+            },
+            ),
+          GestureDetector(
+            child: _accion(context,Icons.share, 'SHARE'),
+            onTap: (){
+                 Navigator.pushNamed(context, 'planetas');
+            },
+            ),
         ],
       ),
     );
@@ -88,16 +103,11 @@ class BasicoPage extends StatelessWidget {
   Widget _accion(BuildContext context, IconData icon, String texto) {
     return Column(
       children: <Widget>[
-        GestureDetector(
-            onTap: (){
-             Navigator.pushNamed(context, 'scroll');
-            },
-            child: Icon(
+         Icon(
             icon,
             color: Colors.blue,
             size: 40.0,
           ),
-        ),
         SizedBox(height: 7.0,),
         Text(texto, style: TextStyle(fontSize: 15.0,color: Colors.blue),),
       ],
